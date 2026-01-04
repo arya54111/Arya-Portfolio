@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neon Romantic</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:#0d0d0d;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  font-family:'Poppins',sans-serif;
+}
+
+/* Neon heart */
+.heart{
+  font-size:100px;
+  animation:pulse 2s infinite;
+  text-shadow:0 0 20px #ff1e6d,0 0 40px #ff1e6d;
+}
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.15);}
+  100%{transform:scale(1);}
+}
+
+/* Card */
+.card{
+  position:absolute;
+  bottom:8%;
+  width:85%;
+  max-width:380px;
+  background:rgba(255,255,255,0.1);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  text-align:center;
+  box-shadow:0 0 25px rgba(255,0,85,0.4);
+  animation:fadeUp 1s ease;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.btn{
+  margin-top:15px;
+  padding:12px 30px;
+  font-size:18px;
+  font-weight:bold;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  color:#ff1e6d;
+  background:white;
+  transition:0.3s;
+  box-shadow:0 0 20px rgba(255,0,85,0.5);
+}
+.btn:active{
+  transform:scale(0.85);
+}
+#text{
+  display:none;
+  margin-top:20px;
+  font-size:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="heart">❤️</div>
+
+<div class="card">
+  <h2>To My Favorite Person Maman😍</h2>
+  <p>You light up my whole world💖</p>
+
+  <button class="btn" onclick="show()">Click to Open 💗</button>
+  <div id="text">My heart beats for you💕
+I love you to the moon & back my dear maman...i love you..thanks for every time being there for me💞</div>
+</div>
+
+<script>
+function show(){
+  document.getElementById("text").style.display="block";
+}
+</script>
+
+</body>
+</html>
